@@ -1,0 +1,22 @@
+version: 2
+
+models:
+  - name: stg_coins
+    columns:
+      - name: id
+        tests:
+          - not_null
+          - unique
+      - name: symbol
+        tests:
+          - not_null
+      - name: current_price
+        tests:
+          - not_null
+
+  - name: daily_market_summary
+    columns:
+      - name: date
+        tests:
+          - not_null
+          - unique
